@@ -10,7 +10,7 @@ class Config(object):
     LOGGER = True
 
     # REQUIRED
-    
+    TOKEN =  "7707662173:AAHIK1AjGc2UzrYtmwskWJ7MNHczURKvHYo"
     API_KEY = "26657288"
     OWNER_ID = "1008989961" # If you dont know, run the bot and do /id in your private chat with it
     OWNER_USERNAME = "UR_NEO"
