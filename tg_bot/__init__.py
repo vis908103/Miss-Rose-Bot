@@ -19,14 +19,14 @@ if sys.version_info[0] < 3 or sys.version_info[1] < 6:
 ENV = bool(os.environ.get('ENV', False))
 
 if ENV:
-    TOKEN = os.environ.get('TOKEN', None)
+    TOKEN = os.environ.get('7707662173:AAHIK1AjGc2UzrYtmwskWJ7MNHczURKvHYo', None)
     try:
-        OWNER_ID = int(os.environ.get('OWNER_ID', None))
+        OWNER_ID = int(os.environ.get('1008989961', None))
     except ValueError:
-        raise Exception("Your OWNER_ID env variable is not a valid integer.")
+        raise Exception("Your 1008989961 env variable is not a valid integer.")
 
     MESSAGE_DUMP = os.environ.get('MESSAGE_DUMP', None)
-    OWNER_USERNAME = os.environ.get("OWNER_USERNAME", None)
+    OWNER_USERNAME = os.environ.get("UR_NEO", None)
 
     try:
         SUDO_USERS = set(int(x) for x in os.environ.get("SUDO_USERS", "").split())
@@ -34,7 +34,7 @@ if ENV:
         raise Exception("Your sudo users list does not contain valid integers.")
 
     try:
-        SUPPORT_USERS = set(int(x) for x in os.environ.get("SUPPORT_USERS", "").split())
+        SUPPORT_USERS = set(int(x) for x in os.environ.get("SUPPORT_USERS", "1008989961","8037083010").split())
     except ValueError:
         raise Exception("Your support users list does not contain valid integers.")
 
@@ -44,18 +44,18 @@ if ENV:
         raise Exception("Your whitelisted users list does not contain valid integers.")
 
     WEBHOOK = bool(os.environ.get('WEBHOOK', False))
-    URL = os.environ.get('URL', "")  # Does not contain token
+    URL = os.environ.get('URL', "https://t.me/Anime_india_divine")  # Does not contain token
     PORT = int(os.environ.get('PORT', 5000))
     CERT_PATH = os.environ.get("CERT_PATH")
 
-    DB_URI = os.environ.get('DATABASE_URL')
+    DB_URI = os.environ.get('eg3skk3.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
     DONATION_LINK = os.environ.get('DONATION_LINK')
     LOAD = os.environ.get("LOAD", "").split()
     NO_LOAD = os.environ.get("NO_LOAD", "").split()
     DEL_CMDS = bool(os.environ.get('DEL_CMDS', False))
     STRICT_GBAN = bool(os.environ.get('STRICT_GBAN', False))
     WORKERS = int(os.environ.get('WORKERS', 8))
-    BAN_STICKER = os.environ.get('BAN_STICKER', 'CAACAgQAAxkBAAEHAedfwdK1GHtSZe1Q0F0q6vWRsxL91gAC-QgAAoThEVJCGmPkkeA1_R4E')
+    BAN_STICKER = os.environ.get('BAN_STICKER', '')
     ALLOW_EXCL = os.environ.get('ALLOW_EXCL', False)
     STRICT_GMUTE = bool(os.environ.get('STRICT_GMUTE', False))
 
@@ -102,15 +102,13 @@ else:
     STRICT_GMUTE = Config.STRICT_GMUTE
    
 
-SUDO_USERS.add(OWNER_ID)
-SUDO_USERS.add(683538773)
-SUDO_USERS.add(570400686)
-SUDO_USERS.add(466337795)
-SUDO_USERS.add(254318997)
+SUDO_USERS.add(1008989961)
+SUDO_USERS.add(8037083010)
 
 
 
-updater = tg.Updater(TOKEN, workers=WORKERS)
+
+updater = tg.Updater(7707662173:AAHIK1AjGc2UzrYtmwskWJ7MNHczURKvHYo, workers=WORKERS)
 
 dispatcher = updater.dispatcher
 
